@@ -17,12 +17,11 @@ document.getElementById('inputForm').addEventListener('submit', function (event)
 const getRedirectedUrl = async (shortUrl) => {
   try {
     const response = await fetch(shortUrl, { method: "HEAD", redirect: "follow" });
-    console.log("Input url = " + shortUrl)
-    console.log("It Redirects you to URL = ", response.url);
-    console.log("=======================================================")
-    console.log("=======================================================")
-    //console.log("Response Data:", response);
+    const redirectUrl = response.url
+    return redirectUrl
   } catch (error) {
-    console.error("Error:", error.message);
+    // console.error("Error:", error.message);
+    const errorMsg = "error"
+    return errorMsg
   }
 };
