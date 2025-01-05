@@ -4,6 +4,8 @@ document.getElementById('inputForm').addEventListener('submit', function (event)
 
   // Get the input value
   const name = document.getElementById('nameInput').value;
+  console.log("===================")
+  console.log(name)
 
   // Process input (build output)
   //const greeting = `Hello, ${name}! Welcome to the page.`;
