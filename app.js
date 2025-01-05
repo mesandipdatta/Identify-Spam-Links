@@ -2,7 +2,7 @@
 document.getElementById('inputForm').addEventListener('submit', function (event) {
   event.preventDefault(); // Prevent form from reloading the page
 
-  // Get the input value
+  // Get the input value - SAMPLE https://tinyurl.com/nhbds76x
   const name = document.getElementById('nameInput').value;
   console.log("===================")
   console.log(name)
@@ -18,7 +18,7 @@ document.getElementById('inputForm').addEventListener('submit', function (event)
 
 const getRedirectedUrl = async (shortUrl) => {
   try {
-    const response = await fetch(shortUrl, { method: "HEAD", redirect: "follow" });
+    const response = await fetch(shortUrl, { method: "HEAD", redirect: "follow", mode: 'no-cors' });
     const redirectUrl = response.url
     return redirectUrl
   } catch (error) {
