@@ -11,4 +11,4 @@ npm install node-fetch
 
 
 Run the script with a shortened URL as an argument:
-node app.js https://tinyurl.com/nhbds76x
+node nodeapp.js https://tinyurl.com/nhbds76x

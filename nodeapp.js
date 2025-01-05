@@ -1,3 +1,6 @@
+// Node.js version of app.js.
+// To run this js code in the cli itself for dry test run.
+
 const getRedirectedUrl = async (shortUrl) => {
     try {
       const response = await fetch(shortUrl, { method: "HEAD", redirect: "follow" });
