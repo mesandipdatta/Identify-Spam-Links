@@ -1,7 +1,8 @@
 # Identify-Spam-Links
 
 
-### Points 
+### Points
+====================================================================
 The code opens the shortened URL internally to determine where it redirects. Here's what happens:
 
 HTTP Request: The script makes an HTTP request to the shortened URL.
@@ -15,6 +16,7 @@ This approach is useful for simply checking where a URL points to without fully 
 
 
 ### Safe Monitoring
+====================================================================
 this approach is relatively safe for monitoring spammy or malicious websites because:
 
 Minimal Interaction:
