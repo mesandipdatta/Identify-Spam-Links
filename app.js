@@ -2,6 +2,8 @@ const getRedirectedUrl = async (shortUrl) => {
     try {
       const response = await fetch(shortUrl, { method: "HEAD", redirect: "follow" });
       console.log("Redirected URL:", response.url);
+      console.log("=======================================================")
+      console.log("=======================================================")
       console.log("Redirected URL:", response);
     } catch (error) {
       console.error("Error:", error.message);
