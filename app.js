@@ -19,6 +19,8 @@ document.getElementById('inputForm').addEventListener('submit', function (event)
 const getRedirectedUrl = async (shortUrl) => {
   try {
     const response = await fetch(shortUrl, { method: "HEAD", redirect: "follow", mode: 'no-cors' });
+    console.log("===================")
+    console.log(response)   
     const redirectUrl = response.url
     return redirectUrl
   } catch (error) {
