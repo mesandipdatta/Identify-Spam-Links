@@ -1,0 +1,14 @@
+To run the above JavaScript code from the Linux command line, you can use Node.js. Here's how:
+sudo apt update
+sudo apt install nodejs npm -y
+
+Verify the installation:
+node -v
+npm -v
+
+Node.js doesn’t have fetch built-in for CLI scripts. Install the node-fetch library:
+npm install node-fetch
+
+
+Run the script with a shortened URL as an argument:
+node app.js https://tinyurl.com/nhbds76x
