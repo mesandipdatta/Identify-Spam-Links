@@ -1,21 +1,28 @@
+// JavaScript to process input and generate output
+document.getElementById('inputForm').addEventListener('submit', function (event) {
+  event.preventDefault(); // Prevent form from reloading the page
+
+  // Get the input value
+  const name = document.getElementById('nameInput').value;
+
+  // Process input (build output)
+  //const greeting = `Hello, ${name}! Welcome to the page.`;
+  const greeting = getRedirectedUrl(name);
+
+  // Pass back the output to HTML
+  document.getElementById('outputMessage').textContent = greeting;
+});
+
+
 const getRedirectedUrl = async (shortUrl) => {
-    try {
-      const response = await fetch(shortUrl, { method: "HEAD", redirect: "follow" });
-      console.log("Input url = " + shortUrl)
-      console.log("It Redirects you to URL = ", response.url);
-      console.log("=======================================================")
-      console.log("=======================================================")
-      //console.log("Response Data:", response);
-    } catch (error) {
-      console.error("Error:", error.message);
-    }
-  };
-  
-  // Get the shortened URL from command-line arguments
-  const shortUrl = process.argv[2]; // The first argument after the script name
-  if (!shortUrl) {
-    console.error("Please provide a shortened URL as an argument.");
-    process.exit(1);
+  try {
+    const response = await fetch(shortUrl, { method: "HEAD", redirect: "follow" });
+    console.log("Input url = " + shortUrl)
+    console.log("It Redirects you to URL = ", response.url);
+    console.log("=======================================================")
+    console.log("=======================================================")
+    //console.log("Response Data:", response);
+  } catch (error) {
+    console.error("Error:", error.message);
   }
-  
-  getRedirectedUrl(shortUrl);
+};

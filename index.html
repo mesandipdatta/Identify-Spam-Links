@@ -8,11 +8,18 @@
         <script src="app.js"></script>
     </head>
 
+
     <body>
         <h1> Identify spam links - sent through sms, email etc. </h1>
         <h2> Input the url </h2>
+        <form id="inputForm">
+            <label for="nameInput">Name:</label>
+            <input type="text" id="nameInput" placeholder="Enter your name" required />
+            <button type="submit">Submit</button>
+        </form>
 
-        <input type="text" id="inputUrl" placeholder="Type or paste url here..." />
-        <div id="output"></div>
+        <h2>Output:</h2>
+        <p id="outputMessage">Your greeting will appear here.</p>
     </body>
+
 </html>
