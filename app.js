@@ -4,7 +4,7 @@ document.getElementById('inputForm').addEventListener('submit', function (event)
 
   // Get the input value - SAMPLE https://tinyurl.com/nhbds76x
   const name = document.getElementById('nameInput').value;
-  console.log("===================")
+  console.log("======== 1 ===========")
   console.log(name)
 
   // Process input (build output)
@@ -19,8 +19,8 @@ document.getElementById('inputForm').addEventListener('submit', function (event)
 const getRedirectedUrl = async (shortUrl) => {
   try {
     const response = await fetch(shortUrl, { method: "HEAD", redirect: "follow", mode: 'no-cors' });
-    console.log("===================")
-    console.log(response)   
+    console.log("======== 2 ===========")
+    console.log("Output Response --->", response)   
     const redirectUrl = response.url
     return redirectUrl
   } catch (error) {
